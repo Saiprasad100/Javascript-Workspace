@@ -5,15 +5,60 @@
     <meta charset="UTF-8">
 
     <title>DOM Learning</title>
+    <style>
+    .bg-black{
+     background-color: #212121;
+     color: #fff;
+}
+
+    </style>
 </head>
 
-<body>
+<body class="bg-black">
 
-    <div id="sai" class="bg-black">
-        <h1 class="heading"> DOM practice</h1>
+    <div >
+        <h1 id="sai" class="heading"> DOM practice by Saiprasad <span style="display: none;"> test text</span></h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 
-    </div>
+  <!--  Q> What is the difference between innerText , innerContent ands InnerHTML ?
+    
+    ==> Whatever the data showing in page(user Interface ) thats only come for innerText
+    ==>But in innerContent all text will come in console. 
+    ==>InnerHTML will give all Html lines of code -->
+
+
+<h2>Lorem ipsum dolor sit.</h2>
+<h2>Lorem ipsum dolor sit.</h2>
+<h2>Lorem ipsum dolor sit.</h2>
+<p>Lorem ipsum dolor sit amet.</p>
+<input type="password" name="" id="">
+
+<ul>
+    <li class="list-item">one</li>
+    <li class="list-item">two</li>
+    <li class="list-item">three</li>
+    <li class="list-item">four</li>
+</ul>
+
+<!--
+document.querySelector('ul')
+const myul = document.querySelector('ul')
+undefined
+myul.querySelectorall('li')
+VM1066:1 Uncaught TypeError: myul.querySelectorall is not a function
+    at <anonymous>:1:6
+myul.querySelector('li')
+turnGreen.style.backgroundColor= "green"
+VM1100:1 Uncaught ReferenceError: turnGreen is not defined
+    at <anonymous>:1:1
+const turnGreen = myul.querySelector('li')
+undefined
+turnGreen.style.backgroundColor= "green"
+'green'
+﻿
+
+-->
+</div>
 </body>
 
 </html>
