@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Your Local Time</title>
+
+   
+
+    <style>
+        /* Global styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1E1E1E, #3E3E3E);
+            color: #fff;
+            text-align: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        
+        /* Centering the content */
+        .center {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Banner Text */
+        #banner {
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #ffcc80;
+            text-shadow: 0 0 10px rgba(255, 204, 128, 0.8);
+        }
+
+        /* Clock Box */
+        #clock {
+            font-size: 50px;
+            font-weight: bold;
+            background: linear-gradient(135deg, #ff9800, #ff5722);
+            padding: 20px 60px;
+            margin-top: 15px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 15px rgba(255, 87, 34, 0.8);
+            transition: 0.3s;
+        }
+
+        /* Smooth hover effect on the clock */
+        #clock:hover {
+            transform: scale(1.05);
+            
+            box-shadow: 0px 0px 20px rgb(36, 255, 255);
+        }
+
+    </style>
+</head>
+<body>
+    
+
+    <div class="center">
+        <div id="banner">Your Local Time</div>
+        <div id="clock">Wait a Second</div>
+    </div>
+
+    <!-- JavaScript for Real-Time Clock -->
+    <script>
+        const clock1 = document.getElementById('clock');
+        // const clock = document.querySelector('#clock')
+
+        setInterval(function () {
+            let date = new Date();
+            // console.log(date.toLocaleTimeString());
+            clock1.innerHTML = date.toLocaleTimeString();
+        }, 1000);
+    </script>
+</body>
+</html>
