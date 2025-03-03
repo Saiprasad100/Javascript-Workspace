@@ -1,0 +1,14 @@
+button {
+    color: white;
+    background-color: red;
+}
+
+.darkMode {
+    background-color: black;
+    color: white;
+}
+
+.lightMode {
+    background-color: white;
+    color: black;
+}
