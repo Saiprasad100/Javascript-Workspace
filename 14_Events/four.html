@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Background Color Changer</title>
+    <style>
+        body {
+            background-color: #212121;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 5px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #start {
+            background-color: green;
+            color: white;
+        }
+
+        #stop {
+            background-color: red;
+            color: white;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+    </style>
+  </head>
+  <body>
+   
+
+    <h1>Start should change the Background color every second</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    
+    <script>
+        let intervalId;
+
+        const changeBackgroundColor = () => {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+};
+        document.getElementById("start").addEventListener("click", function () {
+            if (!intervalId) {
+                intervalId = setInterval(changeBackgroundColor, 1000);
+            }
+        });
+
+        document.getElementById("stop").addEventListener("click", function () {
+            clearInterval(intervalId);
+            intervalId = null;
+        });
+    </script>
+  </body>
+</html>
